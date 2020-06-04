@@ -1,0 +1,22 @@
+version: '3'
+services:
+  theme-song-db:
+    image: 'postgres:latest'
+  theme-song-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    depends_on:
+      - theme-song-db
+    environment:
+      - PGUSER=postgres
+      - PGHOST=theme-song-db
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
+    restart: always
+    ports:
+      - '8080:8080'

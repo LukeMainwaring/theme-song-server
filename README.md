@@ -1,1 +1,6 @@
-watch out world! because these two brothers are about to create the best game ever - yay!!!
+Docker scripts to run:
+\$ docker-compose up
+
+To stop:
+Ctrl + c,
+\$ docker-compose down
