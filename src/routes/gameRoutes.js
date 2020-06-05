@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.post('/createGame', (req, res) => {
+router.get('/createGame', (req, res) => {
   res.send({ data: 'word1-word2' });
 });
 

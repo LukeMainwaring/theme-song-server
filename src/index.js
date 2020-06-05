@@ -18,7 +18,7 @@ app.use(
 
 // app.use(authRoutes);
 // app.use(userRoutes);
-app.use(gameRoutes);
+app.use('/api', gameRoutes);
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
